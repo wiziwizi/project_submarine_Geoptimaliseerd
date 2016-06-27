@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &118594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 411898}
+  - 119: {fileID: 11911470}
+  - 114: {fileID: 11424482}
+  m_Layer: 0
+  m_Name: GridProjector
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &411898
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118594}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: -313.7, y: 58.6, z: -8.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11424482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7490c15ab4295245b924abb2a05aaf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fps: 30
+  frames:
+  - {fileID: 2800000, guid: 0928555a109ee3e4f938059888f6f2f0, type: 3}
+  - {fileID: 2800000, guid: 49929d112a2ca454eb0da909febc4ba0, type: 3}
+  - {fileID: 2800000, guid: ee53605b980c9104085e80fbb714cdb5, type: 3}
+  - {fileID: 2800000, guid: 9943954b90765804288eec69280e08ed, type: 3}
+  - {fileID: 2800000, guid: c980eaf0373a54440869dffea3780de9, type: 3}
+  - {fileID: 2800000, guid: f57e4cecada100449bf30916f490044d, type: 3}
+  - {fileID: 2800000, guid: a6d11d9bc3d5d2142b22629ffb2b149f, type: 3}
+  - {fileID: 2800000, guid: 57f2ae004305ddf4790635e5ecc88885, type: 3}
+  - {fileID: 2800000, guid: 768ea18b2990ecf4f8d73e079c9e0efb, type: 3}
+  - {fileID: 2800000, guid: 489d86061de03ec45b820d5bafb36f8c, type: 3}
+  - {fileID: 2800000, guid: 6f429f22ed3fca84d94650a3585b73cd, type: 3}
+  - {fileID: 2800000, guid: 0fa671088eb66f742bd4726a0a374431, type: 3}
+  - {fileID: 2800000, guid: 8f49ee7d38e06364dabf9367cba29943, type: 3}
+  - {fileID: 2800000, guid: 08f8cede8d3609249bd42138f639c743, type: 3}
+  - {fileID: 2800000, guid: a5be6cdaac0afe24bb9711659dad4001, type: 3}
+  - {fileID: 2800000, guid: 868df0140ddce1845b56d0a58e893a35, type: 3}
+  - {fileID: 2800000, guid: 8f9189dc7ccb2744b80d3fed115f56e7, type: 3}
+  - {fileID: 2800000, guid: 09c0aa28a42f3b74fab56d69d81c17ad, type: 3}
+  - {fileID: 2800000, guid: 21cbf15c4e77bf64f9fed9d21ad936ee, type: 3}
+  - {fileID: 2800000, guid: 4965b8b45540d7c499812cbedfb44c74, type: 3}
+  - {fileID: 2800000, guid: f06fb62c62a5514489ef00839b3e77d8, type: 3}
+  - {fileID: 2800000, guid: 42364054aaba4944989314e9b6c72a0a, type: 3}
+  - {fileID: 2800000, guid: 6a36c9e5d610bc849894fea152f981d3, type: 3}
+  - {fileID: 2800000, guid: f9389be15e675a14d83cd11f5e25e12c, type: 3}
+  - {fileID: 2800000, guid: 77bb2d0b48794f5418aa8c41d900f2cf, type: 3}
+  - {fileID: 2800000, guid: 12d68f63d215e214bb15b75f99a028af, type: 3}
+  - {fileID: 2800000, guid: 70f70c3200dd9c642a0a6971bcbb394a, type: 3}
+  - {fileID: 2800000, guid: 784030c60706ed347828685660cb445a, type: 3}
+  - {fileID: 2800000, guid: 2fa701b371fcf904598386e793b9eb98, type: 3}
+  - {fileID: 2800000, guid: b6b7ee953ec981d4c8ae092517a218f8, type: 3}
+  - {fileID: 2800000, guid: ba53dd63910959b4c9bc22b879ae4b48, type: 3}
+  - {fileID: 2800000, guid: a4636dc6114a12c428a0a476c93efd66, type: 3}
+  - {fileID: 2800000, guid: 45c4a5e3b50b4f0418dd3dc19593cbe5, type: 3}
+  - {fileID: 2800000, guid: e443f5887935f8f478c6df5073158ade, type: 3}
+  - {fileID: 2800000, guid: 87fda7566e0c6614580f4dbfa78272ac, type: 3}
+  - {fileID: 2800000, guid: dff47d9e578726c4ca45182ec2b63e85, type: 3}
+  - {fileID: 2800000, guid: 38b63568ffc66df448a1ac3382ccbd90, type: 3}
+  - {fileID: 2800000, guid: 03f9ea86dd136514c9a90d9412a0b139, type: 3}
+  - {fileID: 2800000, guid: 6da4762e42e8beb48b8fd8ba32c585ba, type: 3}
+  - {fileID: 2800000, guid: 1af5153824ed06448a04089ffe3dae74, type: 3}
+  - {fileID: 2800000, guid: 375373e8ac74aaa45a9fa9bb02607ebd, type: 3}
+  - {fileID: 2800000, guid: 3e5f8e3c9e89bad40ab82fcf3947d268, type: 3}
+  - {fileID: 2800000, guid: 19b902cd9c0ec6049a012797e4b5b176, type: 3}
+  - {fileID: 2800000, guid: bd9915fad46b09a4c9b8a82ca97fbce0, type: 3}
+  - {fileID: 2800000, guid: a9e28a893ddfa394498f6fc4d95b028c, type: 3}
+  - {fileID: 2800000, guid: 05b43d4879637bc4d952853957c18c91, type: 3}
+  - {fileID: 2800000, guid: 979c2ae6c2c84434a95c8e00f1a9edd4, type: 3}
+  - {fileID: 2800000, guid: 6155b47fd23df094db2fb9629ea414b5, type: 3}
+  - {fileID: 2800000, guid: 78a6926d49476bf4ea70520bae307de4, type: 3}
+  - {fileID: 2800000, guid: fa83ed87709a6bc4e938074895a2d1e2, type: 3}
+  - {fileID: 2800000, guid: 980c5f9530b279c4f8bffe251e96ec95, type: 3}
+  - {fileID: 2800000, guid: c54ce7d299239734f93ef7d56877f7e3, type: 3}
+  - {fileID: 2800000, guid: 17f1e9e9e8570c441b973a854be441f9, type: 3}
+  - {fileID: 2800000, guid: 1c784eb7c91803a43937f3446332e27f, type: 3}
+  - {fileID: 2800000, guid: 87efd79c00da3cf43a11b2188bc343ad, type: 3}
+  - {fileID: 2800000, guid: deac4b0b86ee81f4da06f8c52d4f10c5, type: 3}
+  - {fileID: 2800000, guid: ba336f516f52cbe42a95194a6a47ee3d, type: 3}
+  - {fileID: 2800000, guid: 957533955e126aa4c9c8b740f2b6183f, type: 3}
+  - {fileID: 2800000, guid: 4f41220961ca78d44af08f2c20af906b, type: 3}
+  - {fileID: 2800000, guid: 426a6ce0ba27abc488f268d2128721b7, type: 3}
+--- !u!119 &11911470
+Projector:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118594}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_NearClipPlane: 0.1
+  m_FarClipPlane: 50
+  m_FieldOfView: 30
+  m_AspectRatio: 1
+  m_Orthographic: 1
+  m_OrthographicSize: 18
+  m_Material: {fileID: 2100000, guid: c7d1a73cf0f423947bae4e238665d9c5, type: 2}
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 118594}
+  m_IsPrefabParent: 1
