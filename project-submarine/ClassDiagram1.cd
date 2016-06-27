@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AnimatedProjector">
+    <Position X="2.25" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAACAAAAAAAAAAAAAIAABAAAAAABAAAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AnimatedProjector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraShake">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAAAAAAAAAAAAAAAAAAAAAAQQAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CameraShake.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_Spawner">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="_Spawner.Wave">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\EnemyScripts\_Spawner.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAYBAYAAACAAAAAAAAAUIAAAAAAAAAFAAABAAAAAAEo=</HashCode>
+      <FileName>Assets\Scripts\EnemyScripts\_Spawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyAI">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIACAAgAAABIECAAACEAAAAAAAAAgQAACAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\EnemyScripts\EnemyAI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyHealth">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQACACAAAAAAIIAAAgAACAAAAAAEAAAaBYAgAAAAEg=</HashCode>
+      <FileName>Assets\Scripts\EnemyScripts\EnemyHealth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyMovement">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\EnemyScripts\EnemyMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthBar">
+    <Position X="14.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\EnemyScripts\HealthBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemysoundmanager">
+    <Position X="2.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAIAAAAAgAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemysoundmanager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NewObjectPooler">
+    <Position X="7.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgCAAAAAAAAAgAAAAgAQIAAAAAAAAAAAAAEI=</HashCode>
+      <FileName>Assets\Scripts\NewObjectPooler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PartclieKill">
+    <Position X="7.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\PartclieKill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pauze">
+    <Position X="2.25" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAAAAAAQAAAAAAAAAAAAAAAAAAAIAAAAAAEAEA=</HashCode>
+      <FileName>Assets\Scripts\PlayerScripts\Pauze.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pickup">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAEAAAiAAAAAAAAAAACAAAAAIEAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PlayerScripts\Pickup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerHealth">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAIAAAAABAAAAAAAAAAAAAAAAABAAAIAgAAg=</HashCode>
+      <FileName>Assets\Scripts\PlayerScripts\PlayerHealth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerMovement">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARIFIAAAiAAAAC9ACCQAAggAAAAAYAAQAAEQAFAAgE=</HashCode>
+      <FileName>Assets\Scripts\PlayerScripts\PlayerMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerShooting">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACAAAAiAABgBAAQwAAAAAAAAAEAAAAgAAQgAAIAA=</HashCode>
+      <FileName>Assets\Scripts\PlayerScripts\PlayerShooting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="projectile">
+    <Position X="11.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAABBAAAAAAAAAIRAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\PlayerScripts\projectile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rotation">
+    <Position X="16.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PlayerScripts\Rotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShipMovement">
+    <Position X="11.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAEAAAAAAAAAAgAAAAAAAAACAEAQlIAgA=</HashCode>
+      <FileName>Assets\Scripts\PlayerScripts\ShipMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rotors">
+    <Position X="13.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Rotors.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneHandler">
+    <Position X="4.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gABAAAAAACBAAAggAEAAAAAABAgIEEUgAABAAAAAAQA=</HashCode>
+      <FileName>Assets\Scripts\SceneHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScreenShake">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAIAAAAAAAAAAAAABAACABAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\ScreenShake.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScreenShakeTest">
+    <Position X="13.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ScreenShakeTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoundManager">
+    <Position X="10.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAARAAAAAAAAAAAACQABAAAABAAACAAAAAAAAAJEA=</HashCode>
+      <FileName>Assets\Scripts\SoundManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIController">
+    <Position X="14.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAACAAAAgAAAAIAAAgCAAAAEEBAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\Scripts\UIController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Underwater">
+    <Position X="7.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Underwater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UpgradeShop">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AqgAAAAICgAAAhCEAQAgAFABgQIAAQD7IAAaaBEAQFA=</HashCode>
+      <FileName>Assets\Scripts\UpgradeShop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

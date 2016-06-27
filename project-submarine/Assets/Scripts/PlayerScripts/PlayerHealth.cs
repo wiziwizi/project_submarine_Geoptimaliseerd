@@ -5,22 +5,22 @@ using Image=UnityEngine.UI.Image;
 
 public class PlayerHealth : MonoBehaviour 
 {
-	public static float health = 100;
+	public static float _health = 100;
 	private bool heal;
 	private bool playerDead;
 
 	[SerializeField]
-	private Image HealthBar;
+	private Image healthBar;
 
 	void Update()
 	{
-		HealthBar.fillAmount = health / 100f;
-		if (health <= 0) 
+		healthBar.fillAmount = _health / 100f;
+		if (_health <= 0) 
 		{
-			health = 100;
+			_health = 100;
 			LevelReset ();
 		}
-		if (health < 100 && heal == false)
+		if (_health < 100 && heal == false)
 		{
 			heal = true;
 			StartCoroutine ("Healing");
@@ -34,8 +34,8 @@ public class PlayerHealth : MonoBehaviour
 	IEnumerator Healing()
 	{
 		yield return new WaitForSeconds (2);
-		health += 2;
-		if (health > 99)
+		_health += 2;
+		if (_health > 99)
 		{
 			heal = false;
 		}

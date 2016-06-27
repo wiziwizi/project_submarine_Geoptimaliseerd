@@ -5,36 +5,35 @@ using Image=UnityEngine.UI.Image;
 
 public class EnemyHealth : MonoBehaviour 
 {
-	public float health;
-	public float Damage;
-	public GameObject Pickup;
+	[SerializeField]
+	private float health;
+	[SerializeField]
+	private float damage;
+	[SerializeField]
+	private GameObject pickup;
+	[SerializeField]
+	private GameObject particles;
+	[SerializeField]
+	private Image healthBar;
+	[SerializeField]
+	private ParticleSystem FX_Enemy;
+
 	private int i;
 	private float random;
-	private bool CanHit = true;
+	private bool canHit = true;
 	private GameObject[] sp;
-	private GameObject _canvas;
-	[SerializeField]
-	private Image HealthBar;
+	private GameObject canvas;
 	private UIController uiController;
-	[SerializeField]
-
-
-
-	public GameObject particles;
 	private ParticleSystem particleEmission;
-	private AudioSource audioSource;
-	[SerializeField]
-	//private GameObject Enemy;
-	private ParticleSystem FX_Enemy;
+
 
 	void Awake ()
 	{
 		particleEmission = particles.GetComponent<ParticleSystem> ();
-		_canvas = GameObject.FindGameObjectWithTag ("UIController");
-		uiController = _canvas.GetComponent<UIController> ();
+		canvas = GameObject.FindGameObjectWithTag ("UIController");
+		uiController = canvas.GetComponent<UIController> ();
 		sp = GameObject.FindGameObjectsWithTag ("EnemySpawnPoint");
 		random = Random.value * 100f;
-		audioSource = GetComponent<AudioSource>();
 	}
 
 
@@ -43,7 +42,7 @@ public class EnemyHealth : MonoBehaviour
 		
 		if (health <= 0) 
 		{
-			CanHit = false;
+			canHit = false;
 			//particleEmission.Play ();
 			Instantiate (FX_Enemy, transform.position, transform.rotation);
 			EnemyDeath ();
@@ -52,10 +51,10 @@ public class EnemyHealth : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.transform.tag == "projectile" && CanHit == true)
+		if (other.transform.tag == "projectile" && canHit == true)
 		{
-			health -= Damage;
-			HealthBar.fillAmount = health / 100f;
+			health -= damage;
+			healthBar.fillAmount = health / 100f;
 		}
 	}
 
@@ -71,7 +70,7 @@ public class EnemyHealth : MonoBehaviour
 		}
 		if(random < 30)
 		{
-			Instantiate (Pickup, transform.position, transform.rotation);
+			Instantiate (pickup, transform.position, transform.rotation);
 		}
 	}
 }

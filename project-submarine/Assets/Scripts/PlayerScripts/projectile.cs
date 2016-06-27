@@ -3,7 +3,7 @@ using System.Collections;
 
 public class projectile : MonoBehaviour 
 {
-	private float _speed = 90f;
+	private float speed = 90f;
 
 
 	void OnEnable(){
@@ -11,11 +11,11 @@ public class projectile : MonoBehaviour
 	}
 
 	void Update() {
-		transform.Translate (Vector3.forward * _speed * Time.deltaTime);
+		transform.Translate (Vector3.forward * speed * Time.deltaTime);
 	}
 	public void SetSpeed(float value)
 	{
-		_speed = value;
+		speed = value;
 	}
 	void OnTriggerEnter(Collider other)
 	{

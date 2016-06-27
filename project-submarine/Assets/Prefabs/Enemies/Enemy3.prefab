@@ -210,7 +210,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -261.8103, y: 11.55, z: -60.53426}
+  m_LocalPosition: {x: -241.82593, y: 15.381575, z: 64.4351}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 403728}
@@ -660,8 +660,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1200ed243b596da4e93d17feaf87260b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 15
-  MoveSpeed: 8
+  damage: 35
+  moveSpeed: 9
 --- !u!114 &11446118
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -694,17 +694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 342309eac61945a498d09bb2af899e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gravel:
-  - {fileID: 8300000, guid: 207e70e17e09af647a332d03e9ba302c, type: 3}
-  - {fileID: 8300000, guid: cc9c9a833f0484c4493fe5cf8e03eb02, type: 3}
-  - {fileID: 8300000, guid: abe532677211a0a46bae1ae2871e7d43, type: 3}
-  - {fileID: 8300000, guid: 147ab152246ee09459fe97fb08f02f8a, type: 3}
-  - {fileID: 8300000, guid: 16d689cbc4bc10349bb69a0179b10db9, type: 3}
-  - {fileID: 8300000, guid: 7a1e1504315fb3a40bd5c4014f917276, type: 3}
-  - {fileID: 8300000, guid: 8165e129396d1314080dd30dc9254ad9, type: 3}
-  - {fileID: 8300000, guid: 52132d372eb8a7e488adb9fc0abc1428, type: 3}
-  - {fileID: 8300000, guid: b948d1db538d839498fb6f1d3d20ca63, type: 3}
-  - {fileID: 8300000, guid: 684dfaad76536374b819ee4f9734de8a, type: 3}
+  gravel: []
 --- !u!114 &11478712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -717,10 +707,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  Damage: 20
-  Pickup: {fileID: 195032, guid: ebac63d1f3bbaff4a841b64d76eed2c3, type: 2}
-  HealthBar: {fileID: 11490672}
+  damage: 15
+  pickup: {fileID: 100000, guid: 9b135648255d3894fa68bf96b12c5a0c, type: 3}
   particles: {fileID: 130964}
+  healthBar: {fileID: 11490672}
   FX_Enemy: {fileID: 19870180, guid: 37befafdf356e4444b684f07b3d19784, type: 2}
 --- !u!114 &11488186
 MonoBehaviour:

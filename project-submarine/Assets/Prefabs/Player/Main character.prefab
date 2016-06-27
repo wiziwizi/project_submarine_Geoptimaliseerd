@@ -311,7 +311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &130448
 GameObject:
   m_ObjectHideFlags: 1
@@ -656,7 +656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &170770
 GameObject:
   m_ObjectHideFlags: 1
@@ -3126,8 +3126,8 @@ MonoBehaviour:
   muzzle: {fileID: 416188}
   Projectile: {fileID: 11403124, guid: 01d83ae8b40c7944c9e11aac67deae17, type: 2}
   shootRate: 0.5
-  Aim: 1
-  Weapon4: {fileID: 175648}
+  aim: 1
+  weapon4: {fileID: 175648}
   particles: {fileID: 0}
 --- !u!114 &11430810
 MonoBehaviour:
@@ -3144,8 +3144,8 @@ MonoBehaviour:
   muzzle: {fileID: 496462}
   Projectile: {fileID: 11403124, guid: 01d83ae8b40c7944c9e11aac67deae17, type: 2}
   shootRate: 0.5
-  Aim: 1
-  Weapon4: {fileID: 175648}
+  aim: 1
+  weapon4: {fileID: 175648}
   particles: {fileID: 184864}
 --- !u!114 &11433180
 MonoBehaviour:
@@ -3162,8 +3162,8 @@ MonoBehaviour:
   muzzle: {fileID: 470800}
   Projectile: {fileID: 11403124, guid: 01d83ae8b40c7944c9e11aac67deae17, type: 2}
   shootRate: 0.6
-  Aim: 0
-  Weapon4: {fileID: 175648}
+  aim: 0
+  weapon4: {fileID: 175648}
   particles: {fileID: 0}
 --- !u!114 &11433550
 MonoBehaviour:
@@ -3180,8 +3180,8 @@ MonoBehaviour:
   muzzle: {fileID: 446018}
   Projectile: {fileID: 11403124, guid: 01d83ae8b40c7944c9e11aac67deae17, type: 2}
   shootRate: 0.5
-  Aim: 1
-  Weapon4: {fileID: 175648}
+  aim: 1
+  weapon4: {fileID: 175648}
   particles: {fileID: 0}
 --- !u!114 &11442002
 MonoBehaviour:
@@ -3198,8 +3198,8 @@ MonoBehaviour:
   muzzle: {fileID: 410552}
   Projectile: {fileID: 11403124, guid: 01d83ae8b40c7944c9e11aac67deae17, type: 2}
   shootRate: 0.5
-  Aim: 0
-  Weapon4: {fileID: 175648}
+  aim: 0
+  weapon4: {fileID: 175648}
   particles: {fileID: 0}
 --- !u!114 &11447476
 MonoBehaviour:
@@ -3227,8 +3227,8 @@ MonoBehaviour:
   muzzle: {fileID: 439814}
   Projectile: {fileID: 11403124, guid: 01d83ae8b40c7944c9e11aac67deae17, type: 2}
   shootRate: 0.5
-  Aim: 0
-  Weapon4: {fileID: 175648}
+  aim: 0
+  weapon4: {fileID: 175648}
   particles: {fileID: 0}
 --- !u!114 &11453052
 MonoBehaviour:
@@ -3245,8 +3245,8 @@ MonoBehaviour:
   muzzle: {fileID: 421306}
   Projectile: {fileID: 11403124, guid: 01d83ae8b40c7944c9e11aac67deae17, type: 2}
   shootRate: 0.5
-  Aim: 1
-  Weapon4: {fileID: 175648}
+  aim: 1
+  weapon4: {fileID: 175648}
   particles: {fileID: 0}
 --- !u!114 &11455560
 MonoBehaviour:
@@ -3259,14 +3259,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad9af8116e51ab34898002ef079aed98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EToShop: {fileID: 0}
+  eToShop: {fileID: 0}
   particlesEngine1: {fileID: 130448}
   particlesEngine2: {fileID: 183908}
   particlesEngine3: {fileID: 121764}
   particlesEngine4: {fileID: 106426}
   particlesEngine5: {fileID: 117306}
   particlesEngine6: {fileID: 169362}
-  particlesEngine7: {fileID: 0}
 --- !u!114 &11462582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3282,8 +3281,8 @@ MonoBehaviour:
   muzzle: {fileID: 480134}
   Projectile: {fileID: 11403124, guid: 01d83ae8b40c7944c9e11aac67deae17, type: 2}
   shootRate: 0.5
-  Aim: 1
-  Weapon4: {fileID: 175648}
+  aim: 1
+  weapon4: {fileID: 175648}
   particles: {fileID: 0}
 --- !u!114 &11468086
 MonoBehaviour:
@@ -3312,8 +3311,8 @@ MonoBehaviour:
   muzzle: {fileID: 423782}
   Projectile: {fileID: 11403124, guid: 01d83ae8b40c7944c9e11aac67deae17, type: 2}
   shootRate: 0.6
-  Aim: 0
-  Weapon4: {fileID: 175648}
+  aim: 0
+  weapon4: {fileID: 175648}
   particles: {fileID: 0}
 --- !u!114 &11481638
 MonoBehaviour:
@@ -3338,7 +3337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c4c749aa1dbff841afe9a3ef05eb7fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthBar: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!114 &11488820
 MonoBehaviour:
   m_ObjectHideFlags: 1

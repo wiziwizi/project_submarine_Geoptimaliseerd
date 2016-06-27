@@ -4,11 +4,15 @@ using UnityEngine.UI;
 
 public class _Spawner : MonoBehaviour {
 
-	public Wave[] waves;
-	public EnemyAI enemy;
+	[SerializeField]
+	private Wave[] waves;
+	[SerializeField]
+	private EnemyAI enemy;
+
 	private GameObject[] gos;
-	public static int WaveNumber = 1;
-	public static bool NextWaveBool;
+
+	public static int _waveNumber = 1;
+	public static bool _nextWaveBool;
 
 
 	Wave currentWave;
@@ -34,7 +38,6 @@ public class _Spawner : MonoBehaviour {
 			nextSpawnTime = Time.time + currentWave.timeBetweenSpawns;
 
 			EnemyAI spawnedEnemy = Instantiate(enemy, transform.position, Quaternion.identity) as EnemyAI;
-			//spawnedEnemy.OnDeath += OnEnemyDeath;
 			gos = GameObject.FindGameObjectsWithTag("Enemy");
 		}
 	}
@@ -48,7 +51,7 @@ public class _Spawner : MonoBehaviour {
 		Debug.Log ("Enemies" +gos.Length);
 		if (gos.Length == 1)
 		{
-			UIController.NextWaveBool = true;
+			UIController._nextWaveBool = true;
 			Invoke ("TimeDelay", 5f);
 		}
 
@@ -63,8 +66,8 @@ public class _Spawner : MonoBehaviour {
 	{
 		Debug.Log ("Nextwave");
 		currentWaveNumber++;
-		WaveNumber = currentWaveNumber;
-		UIController.NextWaveBool = false;
+		_waveNumber = currentWaveNumber;
+		UIController._nextWaveBool = false;
 
 		if (currentWaveNumber - 1 < waves.Length)
 		{

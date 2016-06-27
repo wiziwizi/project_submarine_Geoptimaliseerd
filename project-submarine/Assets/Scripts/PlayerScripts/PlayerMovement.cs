@@ -18,13 +18,11 @@ public class PlayerMovement : MonoBehaviour
 	private float accelR = .5f; //acceleratie rotatie.
 	private float accelB = .2f; //acceleratie back.
 
-	private int RotateF;
-	private int RotateB;
 	private Quaternion original;
-	private Rigidbody rigidbody;
+	private Rigidbody rb;
 
 	[SerializeField]
-	private Canvas EToShop;
+	private Canvas eToShop;
 
 	[SerializeField]
 	private GameObject particlesEngine1;
@@ -50,9 +48,9 @@ public class PlayerMovement : MonoBehaviour
 
 	void Start()
 	{
-		EToShop = EToShop.GetComponent<Canvas>();
-		EToShop.enabled = false;
-		rigidbody = GetComponent<Rigidbody> ();
+		eToShop = eToShop.GetComponent<Canvas>();
+		eToShop.enabled = false;
+		rb = GetComponent<Rigidbody> ();
 		particleEmissionEngine1 = particlesEngine1.GetComponent<ParticleSystem> ();
 		particleEmissionEngine2 = particlesEngine2.GetComponent<ParticleSystem> ();
 		particleEmissionEngine3 = particlesEngine3.GetComponent<ParticleSystem> ();
@@ -214,13 +212,13 @@ public class PlayerMovement : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		rigidbody.MovePosition (rigidbody.position + (transform.TransformDirection( Vector3.forward) * speedF * Time.fixedDeltaTime));
-		rigidbody.MovePosition (rigidbody.position + (transform.TransformDirection( Vector3.back) * speedB * Time.fixedDeltaTime));
-		rigidbody.MovePosition (rigidbody.position + (transform.TransformDirection( Vector3.down) * speedD * Time.fixedDeltaTime));
-		rigidbody.MovePosition (rigidbody.position + (transform.TransformDirection( Vector3.up) * speedU * Time.fixedDeltaTime));
+		rb.MovePosition (rb.position + (transform.TransformDirection( Vector3.forward) * speedF * Time.fixedDeltaTime));
+		rb.MovePosition (rb.position + (transform.TransformDirection( Vector3.back) * speedB * Time.fixedDeltaTime));
+		rb.MovePosition (rb.position + (transform.TransformDirection( Vector3.down) * speedD * Time.fixedDeltaTime));
+		rb.MovePosition (rb.position + (transform.TransformDirection( Vector3.up) * speedU * Time.fixedDeltaTime));
 
-		rigidbody.MoveRotation (rigidbody.rotation * Quaternion.Euler (Vector3.down * rotationL * Time.fixedDeltaTime));
-		rigidbody.MoveRotation (rigidbody.rotation * Quaternion.Euler (Vector3.up * rotationR * Time.fixedDeltaTime));
+		rb.MoveRotation (rb.rotation * Quaternion.Euler (Vector3.down * rotationL * Time.fixedDeltaTime));
+		rb.MoveRotation (rb.rotation * Quaternion.Euler (Vector3.up * rotationR * Time.fixedDeltaTime));
 	}
 	public void UpgradeEngine ()
 	{
@@ -250,13 +248,13 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if (other.CompareTag("Shop"))
 		{
-			EToShop.enabled = true;
-			UpgradeShop.CanShop = true;
+			eToShop.enabled = true;
+			UpgradeShop._canShop = true;
 		}
 
 		if (other.CompareTag("Shop"))
 		{
-			UpgradeShop.Secret = true;
+			UpgradeShop._secret = true;
 		}
 	}
 
@@ -264,13 +262,13 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if (other.CompareTag("Shop"))
 		{
-			EToShop.enabled = false;
-			UpgradeShop.CanShop = false;
+			eToShop.enabled = false;
+			UpgradeShop._canShop = false;
 		}
 
 		if (other.CompareTag("Secret"))
 		{
-			UpgradeShop.Secret = false;
+			UpgradeShop._secret = false;
 		}
 	}
 }

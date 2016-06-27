@@ -662,7 +662,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -321.8369, y: 17.58, z: -86.48738}
+  m_LocalPosition: {x: -265.35178, y: 23.07, z: 64.88082}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22416774}
@@ -917,10 +917,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  Damage: 5
-  Pickup: {fileID: 195032, guid: ebac63d1f3bbaff4a841b64d76eed2c3, type: 2}
-  HealthBar: {fileID: 11460624}
+  damage: 5
+  pickup: {fileID: 195032, guid: ebac63d1f3bbaff4a841b64d76eed2c3, type: 2}
   particles: {fileID: 190338}
+  healthBar: {fileID: 11460624}
   FX_Enemy: {fileID: 19870180, guid: 37befafdf356e4444b684f07b3d19784, type: 2}
 --- !u!114 &11434796
 MonoBehaviour:
@@ -1008,8 +1008,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1200ed243b596da4e93d17feaf87260b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 20
-  MoveSpeed: 6
+  damage: 30
+  moveSpeed: 6
 --- !u!136 &13651038
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -2702,6 +2702,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Pitch
       value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: damage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: moveSpeed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -5,50 +5,52 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour {
 
 	[SerializeField]
-	private Text Score;
-	public Text WaveText;
-	public Text WaveNumber;
+	private Text score;
 	[SerializeField]
-	private Text PickupText;
+	private Text waveText;
+	[SerializeField]
+	private Text waveNumber;
+	[SerializeField]
+	private Text pickupText;
 	private GameObject[] er;
-	public static int score;
-	public static int Pickups;
-	public static bool NextWaveBool;
+	public static int _score;
+	public static int _pickups;
+	public static bool _nextWaveBool;
 
 	// Use this for initialization
 	void Start()
 	{
-		WaveText.CrossFadeAlpha (0f, 0.5f, false);
-		WaveNumber.CrossFadeAlpha (0f, 0.5f, false);
-		score = 0;
+		waveText.CrossFadeAlpha (0f, 0.5f, false);
+		waveNumber.CrossFadeAlpha (0f, 0.5f, false);
+		_score = 0;
 		UpdateScore ();
 	}
 
 	void Update()
 	{
-		PickupText.text = ":" + Pickups;
-		WaveText.text = _Spawner.WaveNumber.ToString();
+		pickupText.text = ":" + _pickups;
+		waveText.text = _Spawner._waveNumber.ToString();
 
-		if(NextWaveBool == true)
+		if(_nextWaveBool == true)
 		{
-			WaveText.canvasRenderer.SetAlpha (1f);
-			WaveNumber.canvasRenderer.SetAlpha (1f);
+			waveText.canvasRenderer.SetAlpha (1f);
+			waveNumber.canvasRenderer.SetAlpha (1f);
 		}
 		else
 		{
-			WaveText.CrossFadeAlpha (0f, 0.5f, false);
-			WaveNumber.CrossFadeAlpha (0f, 0.5f, false);
+			waveText.CrossFadeAlpha (0f, 0.5f, false);
+			waveNumber.CrossFadeAlpha (0f, 0.5f, false);
 		}
 	}
 
 	public void AddScore (int newScoreValue)
 	{
-		score += newScoreValue;
+		_score += newScoreValue;
 		UpdateScore ();
 	}
 
 	void UpdateScore ()
 	{
-		Score.text = score + ":";
+		score.text = _score + ":";
 	}
 }

@@ -218,7 +218,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149412}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -289.98474, y: 19.5, z: -51.23669}
+  m_LocalPosition: {x: -250.37148, y: 15.381575, z: 65.39185}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 489966}
@@ -619,10 +619,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  Damage: 25
-  Pickup: {fileID: 195032, guid: ebac63d1f3bbaff4a841b64d76eed2c3, type: 2}
-  HealthBar: {fileID: 11412866}
+  damage: 25
+  pickup: {fileID: 195032, guid: ebac63d1f3bbaff4a841b64d76eed2c3, type: 2}
   particles: {fileID: 143464}
+  healthBar: {fileID: 11412866}
   FX_Enemy: {fileID: 19870180, guid: 37befafdf356e4444b684f07b3d19784, type: 2}
 --- !u!114 &11412866
 MonoBehaviour:
@@ -662,8 +662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1200ed243b596da4e93d17feaf87260b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 20
-  MoveSpeed: 7
+  damage: 20
+  moveSpeed: 7
 --- !u!114 &11456104
 MonoBehaviour:
   m_ObjectHideFlags: 1

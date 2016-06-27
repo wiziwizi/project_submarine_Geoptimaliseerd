@@ -4,30 +4,31 @@ using UnityEngine.SceneManagement;
 
 public class Pauze : MonoBehaviour {
 
-	public static bool Pause = false;
-	public Canvas PauseMenu;
+	public static bool _pause = false;
+	[SerializeField]
+	private Canvas pauseMenu;
 
 	void Awake()
 	{
-		PauseMenu = PauseMenu.GetComponent<Canvas> ();
-		PauseMenu.enabled = false;
+		pauseMenu = pauseMenu.GetComponent<Canvas> ();
+		pauseMenu.enabled = false;
 	}
 
 	void Update ()
 	{
-		if (!Pause && Input.GetKeyDown(KeyCode.Escape))
+		if (!_pause && Input.GetKeyDown(KeyCode.Escape))
 		{
 			Time.timeScale = 0f;
-			Pause = true;
-			PauseMenu.enabled = true;
+			_pause = true;
+			pauseMenu.enabled = true;
 		}
 	}
 
 	public void UnPause()
 	{
 		Time.timeScale = 1f;
-		Pause = false;
-		PauseMenu.enabled = false;
+		_pause = false;
+		pauseMenu.enabled = false;
 	}
 	public void Exit()
 	{

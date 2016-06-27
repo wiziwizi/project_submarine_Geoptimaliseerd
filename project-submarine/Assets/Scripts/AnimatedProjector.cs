@@ -3,8 +3,10 @@ using System.Collections;
 
 public class AnimatedProjector : MonoBehaviour
 {
-	public float fps = 30.0f;
-	public Texture2D[] frames;
+    [SerializeField]
+    private float fps = 30.0f;
+    [SerializeField]
+    private Texture2D[] frames;
 	private int frameIndex;
 	private Projector projector;
 

@@ -6,15 +6,22 @@ using System.Collections;
 
 public class SceneHandler : MonoBehaviour {
 
-	public Canvas quitMenu;
-	public Canvas optionMenu;
-	public Canvas creditsMenu;
+	[SerializeField]
+	private Canvas quitMenu;
+	[SerializeField]
+	private Canvas optionMenu;
+	[SerializeField]
+	private Canvas creditsMenu;
 
-	public Button startText;
-	public Button exitText;
+	[SerializeField]
+	private Button startText;
+	[SerializeField]
+	private Button exitText;
 
-	public Text WaveNumber;
-	public Text Score;
+	[SerializeField]
+	private Text waveNumber;
+	[SerializeField]
+	private Text score;
 
 	private AudioSource audioSource;
 
@@ -30,8 +37,8 @@ public class SceneHandler : MonoBehaviour {
 		optionMenu.enabled = false;
 		creditsMenu.enabled = false;
 		 
-		WaveNumber.text = _Spawner.WaveNumber.ToString();
-		Score.text = UIController.score.ToString();
+		waveNumber.text = _Spawner._waveNumber.ToString();
+		score.text = UIController._score.ToString();
 	}
 	public void NewGame()
 	{	

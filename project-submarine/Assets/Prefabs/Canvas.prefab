@@ -325,7 +325,7 @@ GameObject:
   - 114: {fileID: 11494010}
   - 114: {fileID: 11474050}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: EtoShop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -428,7 +428,7 @@ GameObject:
   - 114: {fileID: 11451128}
   - 114: {fileID: 11401434}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: ShopCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -768,10 +768,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 391f4337cf01a2047a084375f117ca02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Score: {fileID: 11470590}
-  WaveText: {fileID: 11423390}
-  WaveNumber: {fileID: 11403976}
-  PickupText: {fileID: 11499168}
+  score: {fileID: 11470590}
+  waveText: {fileID: 11403976}
+  waveNumber: {fileID: 11423390}
+  pickupText: {fileID: 11499168}
 --- !u!114 &11420530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -868,32 +868,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6534f76bd0d97674499475af4ee1c5cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShopWindow: {fileID: 22343854}
-  Selection: {fileID: 0}
-  Text: {fileID: 161558}
-  EToShop: {fileID: 22361718}
-  Weapon1: {fileID: 0}
-  Weapon2: {fileID: 0}
-  Weapon3: {fileID: 0}
-  WeaponE0: {fileID: 0}
-  WeaponE1: {fileID: 0}
-  WeaponE2: {fileID: 0}
-  WeaponE3: {fileID: 0}
-  Engine1: {fileID: 0}
-  Engine2: {fileID: 0}
-  Engine3: {fileID: 0}
-  EngineE0: {fileID: 0}
-  EngineE1: {fileID: 0}
-  EngineE2: {fileID: 0}
-  EngineE3: {fileID: 0}
-  EngIcon: {fileID: 191574}
-  WepIcon: {fileID: 167378}
-  UpgradeCostWeapon: 5
-  UpgradeCostEngine: 5
-  Desc: {fileID: 11479414}
-  Cost: {fileID: 11429170}
-  Camera1: {fileID: 0}
-  Camera2: {fileID: 0}
+  shopWindow: {fileID: 22343854}
+  selection: {fileID: 0}
+  healthBar: {fileID: 0}
+  eToShop: {fileID: 22361718}
+  weapon1: {fileID: 0}
+  weapon2: {fileID: 0}
+  weapon3: {fileID: 0}
+  weaponE0: {fileID: 0}
+  weaponE1: {fileID: 0}
+  weaponE2: {fileID: 0}
+  weaponE3: {fileID: 0}
+  engine1: {fileID: 0}
+  engine2: {fileID: 0}
+  engine3: {fileID: 0}
+  engineE0: {fileID: 0}
+  engineE1: {fileID: 0}
+  engineE2: {fileID: 0}
+  engineE3: {fileID: 0}
+  engIcon: {fileID: 191574}
+  wepIcon: {fileID: 167378}
+  upgradeCostWeapon: 5
+  upgradeCostEngine: 5
+  desc: {fileID: 11479414}
+  cost: {fileID: 11429170}
+  camera1: {fileID: 0}
+  camera2: {fileID: 0}
   player: {fileID: 0}
 --- !u!114 &11429170
 MonoBehaviour:
@@ -1493,7 +1493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffff1794989c33a40bc442730ad05ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenu: {fileID: 22303626}
+  pauseMenu: {fileID: 22303626}
 --- !u!114 &11479414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2128,7 +2128,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -38, y: 23}
+  m_AnchoredPosition: {x: -38, y: 36}
   m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 1, y: 0}
 --- !u!224 &22436188

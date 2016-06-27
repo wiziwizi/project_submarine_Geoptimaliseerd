@@ -12,16 +12,17 @@ public class PlayerShooting : MonoBehaviour {
 	[SerializeField]
 	private float shootRate;
 	[SerializeField]
-	private bool Aim = false;
+	private bool aim = false;
 	[SerializeField]
-	private GameObject Weapon4;
+	private GameObject weapon4;
 
 	RaycastHit hit;
 
 	private AudioSource audioSource;
 	private float nextFireTime;
 
-	public GameObject particles;
+	[SerializeField]
+	private GameObject particles;
 	private ParticleSystem particleEmission;
 
 	void Start()
@@ -37,11 +38,11 @@ public class PlayerShooting : MonoBehaviour {
 
 	void Update()
 	{
-		if(Weapon4.activeInHierarchy)
+		if(weapon4.activeInHierarchy)
 		{
 			shootRate = .25f;
 		}
-		if (Pauze.Pause == false)
+		if (Pauze._pause == false)
 		{
 			if (Input.GetMouseButton (0) && (Time.time >= nextFireTime))
 			{
@@ -59,7 +60,7 @@ public class PlayerShooting : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		if (Aim == true)
+		if (aim == true)
 		{
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 			if(Physics.Raycast(ray, out hit, 400.0f))
@@ -74,7 +75,7 @@ public class PlayerShooting : MonoBehaviour {
 		{
 			particleEmission.Play ();
 		}
-		GameObject obj = NewObjectPooler.current.GetPooledObject ();
+		GameObject obj = NewObjectPooler._current.GetPooledObject ();
 		if (obj == null) return;
 		obj.transform.position = muzzle.position;
 		obj.transform.rotation = muzzle.rotation;

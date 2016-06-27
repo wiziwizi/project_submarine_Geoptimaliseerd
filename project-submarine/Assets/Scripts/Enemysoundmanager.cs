@@ -2,13 +2,14 @@
 using System.Collections;
 
 public class Enemysoundmanager : MonoBehaviour {
-	public AudioClip [] _gravel;
-	private AudioSource _aSource;
+	[SerializeField]
+	private AudioClip [] gravel;
+	private AudioSource aSource;
 
 
 	// Use this for initialization
 	void Start () {
-		_aSource = GetComponent<AudioSource> ();
+		aSource = GetComponent<AudioSource> ();
 
 		StartCoroutine ("PlaySound");
 
@@ -20,10 +21,10 @@ public class Enemysoundmanager : MonoBehaviour {
 	}
 	IEnumerator PlaySound(){
 		
-		if (_Spawner.NextWaveBool == true) {
+		if (_Spawner._nextWaveBool == true) {
 		
-			_aSource.clip = _gravel [Random.Range (0, _gravel.Length)];
-			_aSource.Play ();
+			aSource.clip = gravel [Random.Range (0, gravel.Length)];
+			aSource.Play ();
 			yield return new WaitForSeconds (5f);
 			StartCoroutine ("PlaySound");
 		}

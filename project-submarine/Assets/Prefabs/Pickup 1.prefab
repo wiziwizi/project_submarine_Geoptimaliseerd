@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf3b41d35e0e45e4eba027e4ac48aeee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUpparticle: {fileID: 151050, guid: 4542b839c778b5f4d852c56383c62fdf, type: 2}
+  pickUpparticle: {fileID: 148016, guid: d5107ec065978954fa37612ec9e18eae, type: 2}
 --- !u!136 &13656092
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -201,7 +201,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: pickUpparticle
+      value: 
+      objectReference: {fileID: 148016, guid: d5107ec065978954fa37612ec9e18eae, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 195032}

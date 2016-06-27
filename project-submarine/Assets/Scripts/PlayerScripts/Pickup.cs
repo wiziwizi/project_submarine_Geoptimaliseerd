@@ -3,18 +3,16 @@ using System.Collections;
 
 public class Pickup : MonoBehaviour
 {
-	private AudioSource audioSource;
 	[SerializeField]
-	private GameObject PickUpparticle;
+	private GameObject pickUpparticle;
 	private ParticleSystem FX_pickup;
-	private GameObject Target;
+	private GameObject target;
 	private bool force;
 
-	void Start(){
-		audioSource = GetComponent<AudioSource>();
-		Target = GameObject.Find ("GravitationalObject");
+	void Start()
+	{
+		target = GameObject.Find ("GravitationalObject");
 	}
-
 
 	void OnTriggerEnter(Collider other)
 	{
@@ -25,9 +23,9 @@ public class Pickup : MonoBehaviour
 
 		if(other.gameObject.CompareTag("Player"))
 		{
-			Instantiate (PickUpparticle, transform.position, transform.rotation);
+			Instantiate (pickUpparticle, transform.position, transform.rotation);
 
-			UIController.Pickups++;
+			UIController._pickups++;
 			Destroy (gameObject);
 		}
 	}
@@ -35,7 +33,7 @@ public class Pickup : MonoBehaviour
 	{
 		if(force == true)
 		{
-			transform.position = Vector3.Lerp (transform.position, Target.transform.position, 3 * Time.fixedDeltaTime);
+			transform.position = Vector3.Lerp (transform.position, target.transform.position, 3 * Time.fixedDeltaTime);
 		}
 	}
 }

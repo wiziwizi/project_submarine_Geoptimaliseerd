@@ -4,75 +4,73 @@ using Image=UnityEngine.UI.Image;
 
 public class EnemyAI : MonoBehaviour {
 
-	private GameObject _player;
-	public static bool playerHit;
-
-	private float BackSpeed;
-	private float ForwardSpeed;
+	private GameObject player;
+	private float backSpeed;
+	private float forwardSpeed;
 	private Rigidbody rb;
 	private AudioSource clip;
 	private ScreenShake screenShake;
+	public static bool _playerHit;
 
-
-
-
-	public float Damage;
-	public float MoveSpeed;
+	[SerializeField]
+	private float damage;
+	[SerializeField]
+	private float moveSpeed;
 
 	// Use this for initialization
 	void Awake () 
 	{
 		clip = GetComponent<AudioSource> ();
 		rb = GetComponent<Rigidbody> ();
-		_player = GameObject.FindGameObjectWithTag ("Player");
-		screenShake = _player.GetComponent<ScreenShake> ();
-		BackSpeed = -MoveSpeed;
-		ForwardSpeed = MoveSpeed;
+		player = GameObject.FindGameObjectWithTag ("Player");
+		screenShake = player.GetComponent<ScreenShake> ();
+		backSpeed = -moveSpeed;
+		forwardSpeed = moveSpeed;
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		transform.LookAt (_player.transform.position);
-		if (playerHit == true)
+		transform.LookAt (player.transform.position);
+		if (_playerHit == true)
 		{
 			screenShake.StartShake ();
 			clip.Play ();
-			MoveSpeed = BackSpeed;
-			PlayerHealth.health -= Damage;
-			playerHit = false;
+			moveSpeed = backSpeed;
+			PlayerHealth._health -= damage;
+			_playerHit = false;
 			Invoke ("Reverse", 0.4f);
 		}
 	}
 
 	void Reverse()
 	{
-		MoveSpeed = ForwardSpeed;
+		moveSpeed = forwardSpeed;
 	}
 
 	void OnTriggerEnter (Collider other)
 	{
 		if (other.gameObject.tag == "Player")
 		{
-			playerHit = true;
+			_playerHit = true;
 		}
 		if (other.gameObject.tag == "projectile")
 		{
-			MoveSpeed = MoveSpeed / 2;
+			moveSpeed = moveSpeed / 2;
 			Invoke ("Reverse", 0.2f);
 		}
 		if(other.CompareTag("Shield"))
 		{
-			MoveSpeed = BackSpeed;
+			moveSpeed = backSpeed;
 			Invoke ("Reverse", 0.4f);
 		}
 	}
 
 	void FixedUpdate()
 	{
-		if (Pauze.Pause == false)
+		if (Pauze._pause == false)
 		{
-			rb.MovePosition (rb.position + (transform.TransformDirection (Vector3.forward) * MoveSpeed * Time.fixedDeltaTime));
+			rb.MovePosition (rb.position + (transform.TransformDirection (Vector3.forward) * moveSpeed * Time.fixedDeltaTime));
 		}
 	}
 }

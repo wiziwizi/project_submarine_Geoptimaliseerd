@@ -5,261 +5,256 @@ using UnityEngine.UI;
 public class UpgradeShop : MonoBehaviour {
 
 	[SerializeField]
-	private Canvas ShopWindow;
+	private Canvas shopWindow;
 	[SerializeField]
-	private GameObject Selection;
+	private GameObject selection;
 	[SerializeField]
-	private GameObject Text;
+	private GameObject healthBar;
 	[SerializeField]
-	private Canvas EToShop;
+	private Canvas eToShop;
 
 	[SerializeField]
-	private GameObject Weapon1;
+	private GameObject weapon1;
 	[SerializeField]
-	private GameObject Weapon2;
+	private GameObject weapon2;
 	[SerializeField]
-	private GameObject Weapon3;
+	private GameObject weapon3;
 
 	[SerializeField]
-	private GameObject WeaponE0;
+	private GameObject weaponE0;
 	[SerializeField]
-	private GameObject WeaponE1;
+	private GameObject weaponE1;
 	[SerializeField]
-	private GameObject WeaponE2;
+	private GameObject weaponE2;
 	[SerializeField]
-	private GameObject WeaponE3;
+	private GameObject weaponE3;
 
 	[SerializeField]
-	private GameObject Engine1;
+	private GameObject engine1;
 	[SerializeField]
-	private GameObject Engine2;
+	private GameObject engine2;
 	[SerializeField]
-	private GameObject Engine3;
+	private GameObject engine3;
 
 	[SerializeField]
-	private GameObject EngineE0;
+	private GameObject engineE0;
 	[SerializeField]
-	private GameObject EngineE1;
+	private GameObject engineE1;
 	[SerializeField]
-	private GameObject EngineE2;
+	private GameObject engineE2;
 	[SerializeField]
-	private GameObject EngineE3;
+	private GameObject engineE3;
 
 	[SerializeField]
-	private GameObject EngIcon;
+	private GameObject engIcon;
 	[SerializeField]
-	private GameObject WepIcon;
+	private GameObject wepIcon;
 
 	[SerializeField]
-	private int UpgradeCostWeapon;
+	private int upgradeCostWeapon;
 	[SerializeField]
-	private int UpgradeCostEngine;
+	private int upgradeCostEngine;
 
 	[SerializeField]
-	private Text Desc;
+	private Text desc;
 	[SerializeField]
-	private Text Cost;
+	private Text cost;
 
 	[SerializeField]
-	private Camera Camera1;
+	private Camera camera1;
 	[SerializeField]
-	private Camera Camera2;
-
+	private Camera camera2;
 
 	private int current = 0;
-	private bool SpeedPlus;
-	private bool SpeedMin;
-	public static bool CanShop;
-	public static bool Secret;
-	private float Speed;
+	private bool speedPlus;
+	private bool speedMin;
+	private float speed;
 	private string currentWepDesc;
 	private string currentEngDesc;
 
+	public static bool _canShop;
+	public static bool _secret;
+
 	[SerializeField]
 	private GameObject player;
-	private PlayerMovement playerMovement;
-
 
 	void Awake()
 	{
 		currentWepDesc = "+ 1 Lazer";
 		currentEngDesc = "+ Rotation speed";
-		Desc.text = currentWepDesc;
-		Cost.text = "Pickup Cost:" + UpgradeCostWeapon;
-		playerMovement = player.GetComponent<PlayerMovement> ();
-		ShopWindow.enabled = false;
-//		Camera1.enabled = true;
-		Camera2.enabled = false;
-		WepIcon.SetActive (true);
-		EngIcon.SetActive (false);
+		desc.text = currentWepDesc;
+		cost.text = "Pickup Cost:" + upgradeCostWeapon;
+		shopWindow.enabled = false;
+		camera2.enabled = false;
+		wepIcon.SetActive (true);
+		engIcon.SetActive (false);
 	}
 
 	public void Exit()
 	{
-		Text.SetActive (true);
-		Pauze.Pause = false;
-		ShopWindow.enabled = false;
-		Camera1.enabled = true;
-		Camera2.enabled = false;
+		//text.SetActive (true);
+		Pauze._pause = false;
+		shopWindow.enabled = false;
+		camera1.enabled = true;
+		camera2.enabled = false;
 	}
 
 	public void Upgrade()
 	{
-		//playerMovement.UpgradeEngine ();
-		if (UIController.Pickups >= UpgradeCostWeapon && current == 0)
+		if (UIController._pickups >= upgradeCostWeapon && current == 0)
 		{
-			if (Weapon1.activeInHierarchy)
+			if (weapon1.activeInHierarchy)
 			{
 				currentWepDesc = "-Aim, + 2 Lazers";
-				WeaponE0.SetActive (false);
-				WeaponE1.SetActive (true);
-				Weapon1.SetActive (false);
-				Weapon2.SetActive (true);
-				UIController.Pickups -= UpgradeCostWeapon;
-				UpgradeCostWeapon += 5;
-				Cost.text = "Pickup Cost:" + UpgradeCostWeapon;
+				weaponE0.SetActive (false);
+				weaponE1.SetActive (true);
+				weapon1.SetActive (false);
+				weapon2.SetActive (true);
+				UIController._pickups -= upgradeCostWeapon;
+				upgradeCostWeapon += 5;
+				cost.text = "Pickup Cost:" + upgradeCostWeapon;
 			}
 		}
-		if(UIController.Pickups >= UpgradeCostWeapon && current == 0)
+		if(UIController._pickups >= upgradeCostWeapon && current == 0)
 		{
-			if(Weapon2.activeInHierarchy)
+			if(weapon2.activeInHierarchy)
 			{
 				currentWepDesc = "- 2 Lazers, + 50 % FireRate";
-				WeaponE1.SetActive (false);
-				WeaponE2.SetActive (true);
-				Weapon2.SetActive(false);
-				Weapon3.SetActive(true);
-				UIController.Pickups -= UpgradeCostWeapon;
-				UpgradeCostWeapon += 5;
-				Cost.text = "Pickup Cost:" + UpgradeCostWeapon;
+				weaponE1.SetActive (false);
+				weaponE2.SetActive (true);
+				weapon2.SetActive(false);
+				weapon3.SetActive(true);
+				UIController._pickups -= upgradeCostWeapon;
+				upgradeCostWeapon += 5;
+				cost.text = "Pickup Cost:" + upgradeCostWeapon;
 			}
 		}
-		if(UIController.Pickups >= UpgradeCostWeapon && current == 0)
+		if(UIController._pickups >= upgradeCostWeapon && current == 0)
 		{
-			if(Weapon3.activeInHierarchy)
+			if(weapon3.activeInHierarchy)
 			{
 				currentWepDesc = "Max";
-				WeaponE2.SetActive (false);
-				WeaponE3.SetActive (true);
-				Weapon3.SetActive(false);
-				SpeedPlus = true;
-				UIController.Pickups -= UpgradeCostWeapon;
-				Cost.text = "Max";
+				weaponE2.SetActive (false);
+				weaponE3.SetActive (true);
+				weapon3.SetActive(false);
+				speedPlus = true;
+				UIController._pickups -= upgradeCostWeapon;
+				cost.text = "Max";
 			}
 		}
 
-		if (UIController.Pickups >= UpgradeCostEngine && current == 1)
+		if (UIController._pickups >= upgradeCostEngine && current == 1)
 		{
-			if (Engine1.activeInHierarchy)
+			if (engine1.activeInHierarchy)
 			{
 				currentEngDesc = "+ Speed";
-				EngineE0.SetActive (false);
-				EngineE1.SetActive (true);
-				Engine1.SetActive (false);
-				Engine2.SetActive (true);
-				UIController.Pickups -= UpgradeCostEngine;
-				UpgradeCostEngine += 5;
-				Cost.text = "Pickup Cost:" + UpgradeCostEngine;
+				engineE0.SetActive (false);
+				engineE1.SetActive (true);
+				engine1.SetActive (false);
+				engine2.SetActive (true);
+				UIController._pickups -= upgradeCostEngine;
+				upgradeCostEngine += 5;
+				cost.text = "Pickup Cost:" + upgradeCostEngine;
 			}
 		}
-		if(UIController.Pickups >= UpgradeCostEngine && current == 1)
+		if(UIController._pickups >= upgradeCostEngine && current == 1)
 		{
-			if(Engine2.activeInHierarchy)
+			if(engine2.activeInHierarchy)
 			{
 				currentEngDesc = "+ Speed, + Rotation speed";
-				EngineE1.SetActive (false);
-				EngineE2.SetActive (true);
-				Engine2.SetActive(false);
-				Engine3.SetActive(true);
-				UIController.Pickups -= UpgradeCostEngine;
-				UpgradeCostEngine += 5;
-				Cost.text = "Pickup Cost:" + UpgradeCostEngine;
+				engineE1.SetActive (false);
+				engineE2.SetActive (true);
+				engine2.SetActive(false);
+				engine3.SetActive(true);
+				UIController._pickups -= upgradeCostEngine;
+				upgradeCostEngine += 5;
+				cost.text = "Pickup Cost:" + upgradeCostEngine;
 			}
 		}
-		if(UIController.Pickups >= UpgradeCostEngine && current == 1)
+		if(UIController._pickups >= upgradeCostEngine && current == 1)
 		{
-			if(Engine3.activeInHierarchy)
+			if(engine3.activeInHierarchy)
 			{
 				currentEngDesc = "Max";
-				EngineE2.SetActive (false);
-				EngineE3.SetActive (true);
-				Engine3.SetActive(false);
-				SpeedMin = true;
-				UIController.Pickups -= UpgradeCostEngine;
-				Cost.text = "Max";
+				engineE2.SetActive (false);
+				engineE3.SetActive (true);
+				engine3.SetActive(false);
+				speedMin = true;
+				UIController._pickups -= upgradeCostEngine;
+				cost.text = "Max";
 			}
 		}
 	}
 
 	public void Next()
 	{
-		SpeedPlus = true;
+		speedPlus = true;
 	}
 
 	public void Previous()
 	{
-		SpeedMin = true;
+		speedMin = true;
 	}
 
 	void FixedUpdate ()
 	{
-		Selection.transform.Translate(Vector3.right * Speed * Time.deltaTime);
-		if (SpeedPlus == true)
+		selection.transform.Translate(Vector3.right * speed * Time.deltaTime);
+		if (speedPlus == true)
 		{
-			Speed += 0.3f;
+			speed += 0.3f;
 
-			if(Selection.transform.position.x > -1695f)
+			if(selection.transform.position.x > -1695f)
 			{
-				Desc.text = currentEngDesc;
-				Speed = 0f;
+				desc.text = currentEngDesc;
+				speed = 0f;
 				current++;
-				WepIcon.SetActive (false);
-				EngIcon.SetActive (true);
-				SpeedPlus = false;
+				wepIcon.SetActive (false);
+				engIcon.SetActive (true);
+				speedPlus = false;
 			}
 		}
 
 
-		if (SpeedMin == true)
+		if (speedMin == true)
 		{
-			Speed -= 0.3f;
+			speed -= 0.3f;
 
-			if(Selection.transform.position.x < -1720.6f)
+			if(selection.transform.position.x < -1720.6f)
 			{
-				Desc.text = currentWepDesc;
-				Cost.text = "Pickup Cost:" + UpgradeCostWeapon;
-				Speed = 0f;
+				desc.text = currentWepDesc;
+				cost.text = "Pickup Cost:" + upgradeCostWeapon;
+				speed = 0f;
 				current--;
-				WepIcon.SetActive (true);
-				EngIcon.SetActive (false);
-				SpeedMin = false;
+				wepIcon.SetActive (true);
+				engIcon.SetActive (false);
+				speedMin = false;
 			}
 		}
 
 
-		if (CanShop == true)
+		if (_canShop == true)
 		{
 			if (Input.GetKey(KeyCode.E))
 			{
-				Desc.text = currentEngDesc;
-				Cost.text = "Pickup Cost: " + UpgradeCostEngine;
-				EToShop.enabled = false;
-				Pauze.Pause = true;
-				Text.SetActive (false);
-				ShopWindow.enabled = true;
-				Camera1.enabled = false;
-				Camera2.enabled = true;
+				desc.text = currentEngDesc;
+				cost.text = "Pickup Cost: " + upgradeCostEngine;
+				eToShop.enabled = false;
+				Pauze._pause = true;
+				//text.SetActive (false);
+				shopWindow.enabled = true;
+				camera1.enabled = false;
+				camera2.enabled = true;
 			}
 		}
 
-		if (Secret == true)
+		if (_secret == true)
 		{
 			if (Input.GetKey(KeyCode.V))
 			{
-				WeaponE0.SetActive (true);
-				WeaponE1.SetActive (true);
-				WeaponE2.SetActive (true);
-				WeaponE3.SetActive (true);
+				weaponE0.SetActive (true);
+				weaponE1.SetActive (true);
+				weaponE2.SetActive (true);
+				weaponE3.SetActive (true);
 			}
 		}
 	}

@@ -3,17 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class NewObjectPooler : MonoBehaviour {
+	public static NewObjectPooler _current;
 
-	public static NewObjectPooler current;
-	public GameObject pooledObject;
-	public int pooledAmount = 20;
-	public bool willGrow = true;
+	[SerializeField]
+	private GameObject pooledObject;
+	[SerializeField]
+	private int pooledAmount = 20;
+	[SerializeField]
+	private bool willGrow = true;
 
 	List<GameObject> pooledObjects;
 
 	void Awake()
 	{
-		current = this;
+		_current = this;
 	}
 
 	void Start ()
