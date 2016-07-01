@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+	private float[] movementValeus;
 	private float speedF = 0f; //speed forward.
 	private float speedB = 0f; //speed Back.
 	private float speedU = 0f; //speed Up.
@@ -25,38 +27,22 @@ public class PlayerMovement : MonoBehaviour
 	private Canvas eToShop;
 
 	[SerializeField]
-	private GameObject particlesEngine1;
-	private ParticleSystem particleEmissionEngine1;
+	private GameObject[] particleEngines;
 
-	[SerializeField]
-	private GameObject particlesEngine2;
-	private ParticleSystem particleEmissionEngine2;
-	[SerializeField]
-	private GameObject particlesEngine3;
-	private ParticleSystem particleEmissionEngine3;
-
-	[SerializeField]
-	private GameObject particlesEngine4;
-	private ParticleSystem particleEmissionEngine4;
-	[SerializeField]
-	private GameObject particlesEngine5;
-	private ParticleSystem particleEmissionEngine5;
-
-	[SerializeField]
-	private GameObject particlesEngine6;
-	private ParticleSystem particleEmissionEngine6;
+	private ParticleSystem[] particleEmissionEngines;
 
 	void Start()
 	{
 		eToShop = eToShop.GetComponent<Canvas>();
 		eToShop.enabled = false;
 		rb = GetComponent<Rigidbody> ();
-		particleEmissionEngine1 = particlesEngine1.GetComponent<ParticleSystem> ();
-		particleEmissionEngine2 = particlesEngine2.GetComponent<ParticleSystem> ();
-		particleEmissionEngine3 = particlesEngine3.GetComponent<ParticleSystem> ();
-		particleEmissionEngine4 = particlesEngine4.GetComponent<ParticleSystem> ();
-		particleEmissionEngine5 = particlesEngine5.GetComponent<ParticleSystem> ();
-		particleEmissionEngine6 = particlesEngine6.GetComponent<ParticleSystem> ();
+		for(int i = 0; i < particleEngines.Length; i++)
+		{
+			Debug.Log (i);
+			Debug.Log (particleEngines.Length);
+			particleEmissionEngines[i] = particleEngines[i].GetComponent<ParticleSystem> ();
+			Debug.Log (particleEmissionEngines [i]);
+		}
 	}
 
 	void Update()
@@ -64,34 +50,32 @@ public class PlayerMovement : MonoBehaviour
 		if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
 		{
 			//Debug.Log (maxR);
-			if(particlesEngine1.activeInHierarchy)
+			if(particleEngines[0].activeInHierarchy)
 			{
-				particleEmissionEngine1.Play();
+				particleEmissionEngines[0].Play();
 			}
-			if(particlesEngine2.activeInHierarchy)
+			if(particleEngines[1].activeInHierarchy)
 			{
-				particleEmissionEngine2.Play();
-				particleEmissionEngine3.Play();
+				particleEmissionEngines[1].Play();
+				particleEmissionEngines[2].Play();
 			}
-			if(particlesEngine4.activeInHierarchy)
+			if(particleEngines[3].activeInHierarchy)
 			{
-				particleEmissionEngine4.Play();
-				particleEmissionEngine5.Play();
+				particleEmissionEngines[3].Play();
+				particleEmissionEngines[4].Play();
 			}
 
-			if(particlesEngine6.activeInHierarchy)
+			if(particleEngines[5].activeInHierarchy)
 			{
-				particleEmissionEngine6.Play();
+				particleEmissionEngines[5].Play();
 			}
 		}
 		else
 		{
-			particleEmissionEngine1.Stop();
-			particleEmissionEngine2.Stop();
-			particleEmissionEngine3.Stop();
-			particleEmissionEngine4.Stop();
-			particleEmissionEngine5.Stop();
-			particleEmissionEngine6.Stop();
+			for (int u = 0; u < particleEmissionEngines.Length; u++)
+			{
+				particleEmissionEngines[u].Stop();
+			}
 		}
 
 		if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
@@ -222,20 +206,20 @@ public class PlayerMovement : MonoBehaviour
 	}
 	public void UpgradeEngine ()
 	{
-		if(particlesEngine2.activeInHierarchy)
+		if(particleEngines[1].activeInHierarchy)
 		{
 			maxR = 55f;
 			accelR = .8f;
 			maxB = 20f;
 			max = 25;
 		}
-		if(particlesEngine4.activeInHierarchy)
+		if(particleEngines[3].activeInHierarchy)
 		{
 			max = 40f;
 			accel = .3f;
 		}
 
-		if(particlesEngine6.activeInHierarchy)
+		if(particleEngines[5].activeInHierarchy)
 		{
 			maxR = 65f;
 			accelR = 1f;

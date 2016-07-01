@@ -872,20 +872,22 @@ MonoBehaviour:
   selection: {fileID: 0}
   healthBar: {fileID: 0}
   eToShop: {fileID: 22361718}
-  weapon1: {fileID: 0}
-  weapon2: {fileID: 0}
-  weapon3: {fileID: 0}
-  weaponE0: {fileID: 0}
-  weaponE1: {fileID: 0}
-  weaponE2: {fileID: 0}
-  weaponE3: {fileID: 0}
-  engine1: {fileID: 0}
-  engine2: {fileID: 0}
-  engine3: {fileID: 0}
-  engineE0: {fileID: 0}
-  engineE1: {fileID: 0}
-  engineE2: {fileID: 0}
-  engineE3: {fileID: 0}
+  shopItems:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  equippedItems:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   engIcon: {fileID: 191574}
   wepIcon: {fileID: 167378}
   upgradeCostWeapon: 5

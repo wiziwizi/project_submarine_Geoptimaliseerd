@@ -3260,12 +3260,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eToShop: {fileID: 0}
-  particlesEngine1: {fileID: 130448}
-  particlesEngine2: {fileID: 183908}
-  particlesEngine3: {fileID: 121764}
-  particlesEngine4: {fileID: 106426}
-  particlesEngine5: {fileID: 117306}
-  particlesEngine6: {fileID: 169362}
+  particleEngines:
+  - {fileID: 130448}
+  - {fileID: 183908}
+  - {fileID: 121764}
+  - {fileID: 106426}
+  - {fileID: 117306}
+  - {fileID: 169362}
 --- !u!114 &11462582
 MonoBehaviour:
   m_ObjectHideFlags: 1

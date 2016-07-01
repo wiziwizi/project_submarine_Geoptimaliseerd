@@ -14,36 +14,10 @@ public class UpgradeShop : MonoBehaviour {
 	private Canvas eToShop;
 
 	[SerializeField]
-	private GameObject weapon1;
-	[SerializeField]
-	private GameObject weapon2;
-	[SerializeField]
-	private GameObject weapon3;
+	private GameObject[] shopItems;
 
 	[SerializeField]
-	private GameObject weaponE0;
-	[SerializeField]
-	private GameObject weaponE1;
-	[SerializeField]
-	private GameObject weaponE2;
-	[SerializeField]
-	private GameObject weaponE3;
-
-	[SerializeField]
-	private GameObject engine1;
-	[SerializeField]
-	private GameObject engine2;
-	[SerializeField]
-	private GameObject engine3;
-
-	[SerializeField]
-	private GameObject engineE0;
-	[SerializeField]
-	private GameObject engineE1;
-	[SerializeField]
-	private GameObject engineE2;
-	[SerializeField]
-	private GameObject engineE3;
+	private GameObject[] equippedItems;
 
 	[SerializeField]
 	private GameObject engIcon;
@@ -103,13 +77,13 @@ public class UpgradeShop : MonoBehaviour {
 	{
 		if (UIController._pickups >= upgradeCostWeapon && current == 0)
 		{
-			if (weapon1.activeInHierarchy)
+			if (shopItems[0].activeInHierarchy)
 			{
 				currentWepDesc = "-Aim, + 2 Lazers";
-				weaponE0.SetActive (false);
-				weaponE1.SetActive (true);
-				weapon1.SetActive (false);
-				weapon2.SetActive (true);
+				equippedItems[0].SetActive (false);
+				equippedItems[1].SetActive (true);
+				shopItems[0].SetActive (false);
+				shopItems[1].SetActive (true);
 				UIController._pickups -= upgradeCostWeapon;
 				upgradeCostWeapon += 5;
 				cost.text = "Pickup Cost:" + upgradeCostWeapon;
@@ -117,13 +91,13 @@ public class UpgradeShop : MonoBehaviour {
 		}
 		if(UIController._pickups >= upgradeCostWeapon && current == 0)
 		{
-			if(weapon2.activeInHierarchy)
+			if(shopItems[1].activeInHierarchy)
 			{
 				currentWepDesc = "- 2 Lazers, + 50 % FireRate";
-				weaponE1.SetActive (false);
-				weaponE2.SetActive (true);
-				weapon2.SetActive(false);
-				weapon3.SetActive(true);
+				equippedItems[1].SetActive (false);
+				equippedItems[2].SetActive (true);
+				shopItems[1].SetActive(false);
+				shopItems[2].SetActive(true);
 				UIController._pickups -= upgradeCostWeapon;
 				upgradeCostWeapon += 5;
 				cost.text = "Pickup Cost:" + upgradeCostWeapon;
@@ -131,12 +105,12 @@ public class UpgradeShop : MonoBehaviour {
 		}
 		if(UIController._pickups >= upgradeCostWeapon && current == 0)
 		{
-			if(weapon3.activeInHierarchy)
+			if(shopItems[2].activeInHierarchy)
 			{
 				currentWepDesc = "Max";
-				weaponE2.SetActive (false);
-				weaponE3.SetActive (true);
-				weapon3.SetActive(false);
+				equippedItems[2].SetActive (false);
+				equippedItems[3].SetActive (true);
+				shopItems[2].SetActive(false);
 				speedPlus = true;
 				UIController._pickups -= upgradeCostWeapon;
 				cost.text = "Max";
@@ -145,13 +119,13 @@ public class UpgradeShop : MonoBehaviour {
 
 		if (UIController._pickups >= upgradeCostEngine && current == 1)
 		{
-			if (engine1.activeInHierarchy)
+			if (shopItems[3].activeInHierarchy)
 			{
 				currentEngDesc = "+ Speed";
-				engineE0.SetActive (false);
-				engineE1.SetActive (true);
-				engine1.SetActive (false);
-				engine2.SetActive (true);
+				equippedItems[4].SetActive (false);
+				equippedItems[5].SetActive (true);
+				shopItems[3].SetActive (false);
+				shopItems[4].SetActive (true);
 				UIController._pickups -= upgradeCostEngine;
 				upgradeCostEngine += 5;
 				cost.text = "Pickup Cost:" + upgradeCostEngine;
@@ -159,13 +133,13 @@ public class UpgradeShop : MonoBehaviour {
 		}
 		if(UIController._pickups >= upgradeCostEngine && current == 1)
 		{
-			if(engine2.activeInHierarchy)
+			if(shopItems[4].activeInHierarchy)
 			{
 				currentEngDesc = "+ Speed, + Rotation speed";
-				engineE1.SetActive (false);
-				engineE2.SetActive (true);
-				engine2.SetActive(false);
-				engine3.SetActive(true);
+				equippedItems[5].SetActive (false);
+				equippedItems[6].SetActive (true);
+				shopItems[4].SetActive(false);
+				shopItems[5].SetActive(true);
 				UIController._pickups -= upgradeCostEngine;
 				upgradeCostEngine += 5;
 				cost.text = "Pickup Cost:" + upgradeCostEngine;
@@ -173,12 +147,12 @@ public class UpgradeShop : MonoBehaviour {
 		}
 		if(UIController._pickups >= upgradeCostEngine && current == 1)
 		{
-			if(engine3.activeInHierarchy)
+			if(shopItems[5].activeInHierarchy)
 			{
 				currentEngDesc = "Max";
-				engineE2.SetActive (false);
-				engineE3.SetActive (true);
-				engine3.SetActive(false);
+				equippedItems[6].SetActive (false);
+				equippedItems[7].SetActive (true);
+				shopItems[0].SetActive(false);
 				speedMin = true;
 				UIController._pickups -= upgradeCostEngine;
 				cost.text = "Max";
@@ -251,10 +225,10 @@ public class UpgradeShop : MonoBehaviour {
 		{
 			if (Input.GetKey(KeyCode.V))
 			{
-				weaponE0.SetActive (true);
-				weaponE1.SetActive (true);
-				weaponE2.SetActive (true);
-				weaponE3.SetActive (true);
+				shopItems[0].SetActive (true);
+				shopItems[1].SetActive (true);
+				shopItems[2].SetActive (true);
+				shopItems[3].SetActive (true);
 			}
 		}
 	}
